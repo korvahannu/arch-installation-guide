@@ -10,7 +10,7 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 #### 2. Check that your system supports UEFI and set system clock
 - Check that your system supports UEFI, if the following command prints nothing it means your system does not support UEFI **ls /sys/firmware/efi/efivars**
 - Update system clock and check that it works with **timedatectl set-ntp true** & **timedatectl status**
-- *(Optional)* Set keyboard layout using **loadkeys <layout>** example is *loadkeys en*
+- *(Optional)* Set keyboard layout using **loadkeys <layout, for example en>**
 
 #### 3. Partition disk
 - Check the device name you want to install Arch Linux to with **fdisk -l**
