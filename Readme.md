@@ -44,8 +44,8 @@
 #### 10. Network configuration
 - Set hostname with **hostnamectl set-hostname <myhostname>**
 - Set hosts content with command **nano /etc/hosts**, set content as:
-> 127.0.0.1		localhost
-> ::1				localhost
+> 127.0.0.1		localhost  
+> ::1				localhost  
 > 127.0.1.1	<myhostname> <-- This is the hostname set with hostnamectl set-hostname
 
 #### 11. Set users
