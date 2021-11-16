@@ -1,6 +1,6 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
 
-###### 1. Make sure you are connected to the internet
+#### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
 - If connection works, continue. Otherswise check wiki
 -- If you are using wireless, set up wireless using command **iwctl**
