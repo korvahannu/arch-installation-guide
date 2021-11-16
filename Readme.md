@@ -10,7 +10,7 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 #### 2. Check that your system supports UEFI and set system clock
 - Check that your system supports UEFI, if the following command prints nothing it means your system does not support UEFI **ls /sys/firmware/efi/efivars**
 - Update system clock and check that it works with **timedatectl set-ntp true** & **timedatectl status**
-- *(Optional)* Set keyboard layout using **loadkeys <layout>** example is *loadkeys en*
+- *(Optional)* Set keyboard layout using **loadkeys <layout>**, for example **loadkeys en**
 
 #### 3. Partition disk
 - Check the device name you want to install Arch Linux to with **fdisk -l**
@@ -43,7 +43,7 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 - Open locale.gen with nano and uncomment the locale you want to use, command is nano **/etc/locale.gen**
 - after saving file generate locale with command **locale-gen**
 - edit locale.conf and write in LANG name accordingly, command is **nano /etc/locale.conf** and content example is **LANG=en_US.UTF-8**
-- if you set keyboard layout in part 2, make the changes permanent with **nano /etc/vcconsole.conf** with conent **KEYMAP=en**
+- if you set keyboard layout in part 2, make the changes permanent with **nano /etc/vcconsole.conf** with content **KEYMAP=en**
 
 #### 10. Network configuration
 - Set hostname with **hostnamectl set-hostname <myhostname>**
