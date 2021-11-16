@@ -16,10 +16,10 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 - Check the device name you want to install Arch Linux to with **fdisk -l**
 - Partition your device with **fdisk (device name)**
 - Use partition scheme below  
->> Atleast 260 MiB of EFI system partition  
->> More than 512 MB of linux swap  
->>Rest of the system as linux file system  
->>*I recommend writing partition names down, such as /dev/sda1 for efi, /dev/sda2 for swap and /dev/sda3 for linux filesystem*
+> Atleast 260 MiB of EFI system partition  
+> More than 512 MB of linux swap  
+>Rest of the system as linux file system  
+>*I recommend writing partition names down, such as /dev/sda1 for efi, /dev/sda2 for swap and /dev/sda3 for linux filesystem*
 
 #### 4. Format partitions
 - EFI partition with **mkfs.fat -F 32 (EFI partition)**
