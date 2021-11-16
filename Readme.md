@@ -54,10 +54,10 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 
 #### 11. Set users
 - Set root password with command **passwd**
-- add standard user:
--- **useradd -m -g users -G wheel (username)**
--- **passwd (username)**
--- Open sudo config file with command **EDITOR=nano visudo**
+- add standard user  
+-- **useradd -m -g users -G wheel (username)**  
+-- **passwd (username)**  
+-- Open sudo config file with command **EDITOR=nano visudo**  
 -- Uncomment the line that says *#%wheel ALL=(ALL) ALL*
 
 #### 12. Installing GRUB
