@@ -31,7 +31,7 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 - turn on swap with **swapon (swap partition)**
 
 #### 6. Pacstrapping
-- pacstrap essential files to your system with example code **pacstrap /mnt base linux linux-firmware linux-headers sudo nano networkmanager wireless_tools wpa_supplicant netctl base-devel firefox**
+- pacstrap essential files to your system with example code **pacstrap /mnt base linux linux-firmware linux-headers sudo nano networkmanager wireless_tools wpa_supplicant netctl base-devel**
 
 #### 7. Generate filesystem table
 - Write **genfstab -U /mnt >> /mnt/etc/fstab**
