@@ -1,13 +1,13 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
 
 ###### 1. Make sure you are connected to the internet
-- Check connection with ping 8.8.8.8
+- Check connection with **ping 8.8.8.8**
 - If connection works, continue. Otherswise check wiki
--- If you are using wireless, use iwctl command to find device, scan and connect to wireless network
+-- If you are using wireless, set up wireless using command **iwctl**
 
 ###### 2. Check that your system supports UEFI and set system clock
-- type ls /sys/firmware/efi/efivars and you should get list of jargon. If you dont get list of jargon, check the wiki because your system does not support UEFI installation
-- update system clock with timedatectl set-ntp true and check that it works with timedatectl status
+- type **ls /sys/firmware/efi/efivars** and you should get list of jargon. If you dont get list of jargon, check the wiki because your system does not support UEFI installation
+- update system clock with **timedatectl set-ntp true** and check that it works with **timedatectl status**
 
 ###### 3. Partition disk
 - Write fdisk -l and find the device you want arch linux installed in
