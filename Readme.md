@@ -1,5 +1,7 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
 
+This guide is for personal use, but if it helps anyone to install Arch Linux to their system I'd be happy.
+
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
 - If connection works, continue. Otherswise check wiki
@@ -10,7 +12,7 @@
 - update system clock and check that it works with **timedatectl set-ntp true** & **timedatectl status**
 
 #### 3. Partition disk
-- Check the device name you want to install arch linux to with **fdisk -l**
+- Check the device name you want to install Arch Linux to with **fdisk -l**
 - Partition your device with **fdisk <device name>**
 - Use partition scheme:
 -- Atleast 260 MiB of EFI system partition
@@ -68,14 +70,14 @@
 - type **pacman -S amd-ucode** for AMD processors
 - type **pacman -S intel-ucode** for intel processors
 - type **pacman -S mesa** for intel/amd CPU
-- *if you use nvidia drivers, check arch wiki for your correct driver*
+- *if you use nvidia drivers, check Arch Wiki for your correct driver*
 
 #### 14. Other VERY IMPORTANT STUFF
 - Enable network manager with **systemctl enable NetworkManager**
 - Set correct timezone with **timedatectl set-timezone <your timezome>**
 - Enable timezone sync with **systemctl enable systemd-timesyncd**
 
-#### 15. Reboot and your arch linux should be installed and working
+#### 15. Reboot and your Arch Linux should be installed and working
 
 #### 16. Install xfce4 with lightdm (Optional)
 - **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
