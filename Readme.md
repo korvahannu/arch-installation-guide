@@ -1,6 +1,7 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
 ![Arch Linux Logo](https://archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png)  
 ---
+## Chapter 1: Preparing your system
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
 - If connection works, continue. Troubleshoot with Arch Wiki  
@@ -28,6 +29,7 @@
 - Mount the filesystem to /mnt using **mount _(linux file system)_ /mnt**
 - Turn on swap with **swapon _(swap partition)_**
 
+## Chapter 2: Installing and setting up your system
 #### 6. Pacstrapping
 - Pacstrap essential files to your system with example code **pacstrap /mnt base linux linux-firmware linux-headers sudo nano networkmanager wireless_tools wpa_supplicant netctl base-devel**
 
@@ -58,6 +60,7 @@
 -- Open sudo config file with command **EDITOR=nano visudo**  
 -- Uncomment the line that says *#%wheel ALL=(ALL) ALL*
 
+## Chapter 3: Bootloader (GRUB) and important device drivers
 #### 12. Installing GRUB
 - Download necessary files with **pacman -S grub efibootmgr dosfstools os-prober mtools**
 - Create EFI directory using command **mkdir /boot/EFI**
@@ -72,6 +75,7 @@
 - Type **pacman -S mesa** for intel/amd CPU
 - *if you use nvidia drivers, check Arch Wiki for your correct driver*
 
+## Chapter 4: Miscellaneous
 #### 14. Other VERY IMPORTANT STUFF
 - Enable network manager with **systemctl enable NetworkManager**
 - Set correct timezone with **timedatectl set-timezone _(your timezome)_**
