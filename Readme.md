@@ -20,7 +20,7 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 > Connect to the network of your choice with **station _(your device)_ _(network of your choice)_**  
 > Wait awhile and press CTRL+C to exit wireless connection setup mode
 - Check connection with **ping 8.8.8.8**
-- If connection is not working, check [Arch Linux Wiki](https://wiki.archlinux.org/ "Arch Wiki"). This is essential for setting up your Arch Linux!
+- If connection is not working, check [Arch Wiki](https://wiki.archlinux.org/ "Arch Wiki"). This is essential for setting up your Arch Linux!
 
 #### 2. Check that your system supports UEFI and set system clock
 - Check that your system supports UEFI, if the following command prints nothing it means your system does not support UEFI **ls /sys/firmware/efi/efivars**
@@ -89,7 +89,7 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 - Install microchip driver for AMD processors with **pacman -S amd-ucode**
 - Install microchip driver for Intel processors with **pacman -S intel-ucode**
 - Install graphics driver for Intel or AMD GPU with **pacman -S mesa**
-- For NVIDIA drivers check the [Arch Linux Wiki Nvidia](https://wiki.archlinux.org/title/NVIDIA "Arch Wiki for your correct GPU driver")
+- For NVIDIA drivers check the [Arch Wiki for your correct GPU driver](https://wiki.archlinux.org/title/NVIDIA "Arch Wiki for your correct GPU driver")
 
 ## Chapter 4: Enabling services and installing a desktop environment
 #### 14. Enable important services and set correct timezone
