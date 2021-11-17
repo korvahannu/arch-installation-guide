@@ -54,18 +54,19 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 
 #### 10. Network configuration
 - Set hostname with **hostnamectl set-hostname _(myhostname)_**
-- Set hosts content with command **nano /etc/hosts**, set content as:
+- Set hosts -file content to what is said below with command **nano /etc/hosts**
 > 127.0.0.1		localhost  
 > ::1				localhost  
 > 127.0.1.1	(myhostname) <-- This is the hostname set with hostnamectl set-hostname
 
-#### 11. Set users
+#### 11. Set root password and add a standard user
 - Set root password with command **passwd**
 - Add standard user  
 -- **useradd -m -g users -G wheel _(username)_**  
 -- **passwd _(username)_**  
 -- Open sudo config file with command **EDITOR=nano visudo**  
--- Uncomment the line that says *#%wheel ALL=(ALL) ALL*
+-- Uncomment the line that says *#%wheel ALL=(ALL) ALL*  
+-- Repeat process if you want to add more users
 
 ## Chapter 3: Bootloader (GRUB) and important device drivers
 #### 12. Installing GRUB
@@ -77,19 +78,20 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 - Set up grub config with **grub-mkconfig -o /boot/grub/grub.cfg**
 
 #### 13. Install drivers
-- Type **pacman -S amd-ucode** for AMD processors
-- Type **pacman -S intel-ucode** for intel processors
-- Type **pacman -S mesa** for intel/amd CPU
-- *if you use nvidia drivers, check Arch Wiki for your correct driver*
+- Install microchip driver for AMD processors with **pacman -S amd-ucode**
+- Install microchip driver for Intel processors with **pacman -S intel-ucode**
+- Install graphics driver for Intel or AMD GPU with **pacman -S mesa**
+- For NVIDIA drivers check the [Arch Linux Wiki Nvidia](https://wiki.archlinux.org/title/NVIDIA "Arch Wiki for your correct GPU driver")
 
 ## Chapter 4: Enabling services and installing a desktop environment
 #### 14. Enable important services and set correct timezone
 - Enable network manager with **systemctl enable NetworkManager**
-- Set correct timezone with **timedatectl set-timezone _(your timezome)_**
+- List available timezones with **timedatectl list-timezones**
+- Set correct timezone with **timedatectl set-timezone _(your timezome)_**  
 - Enable timezone sync with **systemctl enable systemd-timesyncd**
 
 #### 15. Install xfce4 with lightdm
-- *Skip this step (step 15.) if you want clean Arch Linux with bash only*
+- *Skip this step if you want clean Arch Linux without the xfce4 desktop environment*
 - Command to download necessary files **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
 - Enable login screen with **systemctl enable lightdm**
 - Reboot by writing **exit** and then **shutdown now**
