@@ -105,4 +105,4 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 - Reboot by writing **exit** and then **shutdown now**
 
 #### 16. Reboot and your Arch Linux should be installed and working
-- Reboot by writing **exit** and then **shutdown now**
+- Reboot by first exiting arch-chroot with **exit**, then unmount everything with **umount -a** and then write **reboot**
