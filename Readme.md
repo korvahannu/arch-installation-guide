@@ -1,6 +1,10 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
 ![Arch Linux Logo](https://archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png)  
 
+#### Important links
+- [Arch Linux Homepage](https://archlinux.org/ "Arch Linux Homepage")
+- [Arch Linux Wiki](https://wiki.archlinux.org/ "Arch Wiki")
+
 ## Chapter 1: Preparing your system
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
@@ -76,19 +80,15 @@
 - *if you use nvidia drivers, check Arch Wiki for your correct driver*
 
 ## Chapter 4: Miscellaneous
-#### 14. Other VERY IMPORTANT STUFF
+#### 14. Enable important services and set correct timezone
 - Enable network manager with **systemctl enable NetworkManager**
 - Set correct timezone with **timedatectl set-timezone _(your timezome)_**
 - Enable timezone sync with **systemctl enable systemd-timesyncd**
 
-#### 15. Reboot and your Arch Linux should be installed and working
-- Reboot by writing **exit** and then **shutdown now**
-
-#### *Optional* Install xfce4 with lightdm
+#### *Optional* 15. Install xfce4 with lightdm *Skip this step if you want clean Arch Linux with bash only*
 - Command to download necessary files **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
 - Enable login screen with **systemctl enable lightdm**
 - Reboot by writing **exit** and then **shutdown now**
 
-#### Important links
-- [Arch Linux Homepage](https://archlinux.org/ "Arch Linux Homepage")
-- [Arch Linux Wiki](https://wiki.archlinux.org/ "Arch Wiki")
+#### 16. Reboot and your Arch Linux should be installed and working
+- Reboot by writing **exit** and then **shutdown now**
