@@ -1,4 +1,5 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
+![Arch Linux Logo](https://archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png)
 
 This guide is for personal use, but if it helps anyone to install Arch Linux to their system I'd be happy.
 
