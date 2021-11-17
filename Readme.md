@@ -5,6 +5,9 @@
 - [Arch Linux Homepage](https://archlinux.org/ "Arch Linux Homepage")
 - [Arch Linux Wiki](https://wiki.archlinux.org/ "Arch Wiki")
 
+#### Default Prerequisites
+This installation guide assumes that you've downloaded Arch Linux installation .ISO and made it e.g. a bootable USB media stick. This installation also assumes that you have already booted to the Arch Linux bash screen that looks something like [Image of Arch Linux installation](https://www.lifewire.com/thmb/ZoZhXYbhH8FqeYUzcDBxDoADMgc=/774x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/archlinux1-5bc615bac9e77c005184ea55.jpg "This")
+
 ## Chapter 1: Preparing your system
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
