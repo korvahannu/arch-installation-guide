@@ -1,6 +1,6 @@
 ## Arch Linux installation guide for UEFI 16.11.2021
 ![Arch Linux Logo](https://archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png)  
----
+
 ## Chapter 1: Preparing your system
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
