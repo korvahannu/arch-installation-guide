@@ -11,8 +11,14 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 ## Chapter 1: Preparing your system
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
-- If connection works, continue. Troubleshoot with Arch Wiki  
-> If you are using wireless, set up wireless using command **iwctl**
+- If you are using wired connection, internet should work by default
+- If you are using wireless, set up wireless using with quick guide below 
+> Enter wireless connection setup mode with **iwctl**
+> Check what wireless adapters you have and write it down with **device list**
+> Use your wireless adapter to scan available wireless networks with **station _(your device)_ scan**
+> Check what networks your wireless adapter found with **station _(your device)_ get-netoworks**
+> Connect to the network of your choice with **station _(your device)_ _(network of your choice)_**
+> Wait awhile and press CTRL+C to exit wireless connection setup mode
 
 #### 2. Check that your system supports UEFI and set system clock
 - Check that your system supports UEFI, if the following command prints nothing it means your system does not support UEFI **ls /sys/firmware/efi/efivars**
