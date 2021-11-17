@@ -79,13 +79,14 @@
 - Type **pacman -S mesa** for intel/amd CPU
 - *if you use nvidia drivers, check Arch Wiki for your correct driver*
 
-## Chapter 4: Miscellaneous
+## Chapter 4: Enabling services and installing a desktop environment
 #### 14. Enable important services and set correct timezone
 - Enable network manager with **systemctl enable NetworkManager**
 - Set correct timezone with **timedatectl set-timezone _(your timezome)_**
 - Enable timezone sync with **systemctl enable systemd-timesyncd**
 
-#### *Optional* 15. Install xfce4 with lightdm *Skip this step if you want clean Arch Linux with bash only*
+#### 15. Install xfce4 with lightdm
+- *Skip this step (step 15.) if you want clean Arch Linux with bash only*
 - Command to download necessary files **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
 - Enable login screen with **systemctl enable lightdm**
 - Reboot by writing **exit** and then **shutdown now**
