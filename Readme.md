@@ -80,8 +80,9 @@ This guide is for personal use, but if it helps anyone to install Arch Linux to 
 - Enable timezone sync with **systemctl enable systemd-timesyncd**
 
 #### 15. Reboot and your Arch Linux should be installed and working
+- Reboot by writing **exit** and then **shutdown now**
 
 #### 16. Install xfce4 with lightdm (Optional)
 - **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
 - **systemctl enable lightdm**
-- **reboot**
+- reboot
