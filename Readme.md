@@ -4,7 +4,7 @@
 #### 1. Make sure you are connected to the internet
 - Check connection with **ping 8.8.8.8**
 - If connection works, continue. Troubleshoot with Arch Wiki  
--- If you are using wireless, set up wireless using command **iwctl**
+> If you are using wireless, set up wireless using command **iwctl**
 
 #### 2. Check that your system supports UEFI and set system clock
 - Check that your system supports UEFI, if the following command prints nothing it means your system does not support UEFI **ls /sys/firmware/efi/efivars**
@@ -17,7 +17,7 @@
 - Use partition scheme below and write down which partition is which (e.g. /dev/sda2 for swap)
 > Atleast 260 MiB of EFI system partition  
 > More than 512 MB of linux swap  
->Rest of the system as linux file system  
+> Rest of the system as linux file system  
 
 #### 4. Format partitions
 - EFI partition with **mkfs.fat -F 32 _(EFI partition)_**
@@ -26,10 +26,10 @@
 
 #### 5. Mount linux file system
 - Mount the filesystem to /mnt using **mount _(linux file system)_ /mnt**
-- turn on swap with **swapon _(swap partition)_**
+- Turn on swap with **swapon _(swap partition)_**
 
 #### 6. Pacstrapping
-- pacstrap essential files to your system with example code **pacstrap /mnt base linux linux-firmware linux-headers sudo nano networkmanager wireless_tools wpa_supplicant netctl base-devel**
+- Pacstrap essential files to your system with example code **pacstrap /mnt base linux linux-firmware linux-headers sudo nano networkmanager wireless_tools wpa_supplicant netctl base-devel**
 
 #### 7. Generate filesystem table
 - Write **genfstab -U /mnt >> /mnt/etc/fstab**
@@ -39,9 +39,9 @@
 
 #### 9. Set localization (optional)
 - Open locale.gen with nano and uncomment the locale you want to use, command is nano **/etc/locale.gen**
-- after saving file generate locale with command **locale-gen**
-- edit locale.conf and write in LANG name accordingly, command is **nano /etc/locale.conf** and content example is **_LANG=en_US.UTF-8_**
-- if you set keyboard layout in part 2, make the changes permanent with **nano /etc/vconsole.conf** with content **_KEYMAP=en_**
+- Generate locale with command **locale-gen**
+- Edit locale.conf and write in LANG name accordingly, command is **nano /etc/locale.conf** and content example is **_LANG=en_US.UTF-8_**
+- If you set keyboard layout in part 2, make the changes permanent with **nano /etc/vconsole.conf** with content **_KEYMAP=en_**
 
 #### 10. Network configuration
 - Set hostname with **hostnamectl set-hostname _(myhostname)_**
@@ -52,7 +52,7 @@
 
 #### 11. Set users
 - Set root password with command **passwd**
-- add standard user  
+- Add standard user  
 -- **useradd -m -g users -G wheel _(username)_**  
 -- **passwd _(username)_**  
 -- Open sudo config file with command **EDITOR=nano visudo**  
@@ -67,9 +67,9 @@
 - Set up grub config with **grub-mkconfig -o /boot/grub/grub.cfg**
 
 #### 13. Install drivers
-- type **pacman -S amd-ucode** for AMD processors
-- type **pacman -S intel-ucode** for intel processors
-- type **pacman -S mesa** for intel/amd CPU
+- Type **pacman -S amd-ucode** for AMD processors
+- Type **pacman -S intel-ucode** for intel processors
+- Type **pacman -S mesa** for intel/amd CPU
 - *if you use nvidia drivers, check Arch Wiki for your correct driver*
 
 #### 14. Other VERY IMPORTANT STUFF
@@ -80,7 +80,11 @@
 #### 15. Reboot and your Arch Linux should be installed and working
 - Reboot by writing **exit** and then **shutdown now**
 
-#### 16. Install xfce4 with lightdm (Optional)
-- **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
-- **systemctl enable lightdm**
-- reboot
+#### *Optional* Install xfce4 with lightdm
+- Command to download necessary files **pacman -S xorg-server xfce4 xfce4-goodies lightdm lightdm-gtk-greeter**
+- Enable login screen with **systemctl enable lightdm**
+- Reboot by writing **exit** and then **shutdown now**
+
+#### Important links
+- [Arch Linux Homepage](https://archlinux.org/ "Arch Linux Homepage")
+- [Arch Linux Wiki](https://wiki.archlinux.org/ "Arch Wiki")
