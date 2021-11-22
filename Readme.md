@@ -82,7 +82,7 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 - Create EFI directory using command **mkdir /boot/EFI**
 - Mount created directory to efi partition with **mount _(EFI PARTITION)_ /boot/EFI**
 - Install grub with **grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck**
-- Legacy only (non-uefi): *grub-install --target=i386-pc --recheck /dev/sda*
+- Legacy only (non-uefi): *grub-install --target=i386-pc --recheck (DEVICE NAME, e.g. /dev/sda*
 - Copy locale to grub with this command **cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo**
 - Set up grub config with **grub-mkconfig -o /boot/grub/grub.cfg**
 
