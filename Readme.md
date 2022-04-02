@@ -65,7 +65,7 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 - Set hosts -file content to what is said below with command **nano /etc/hosts**
 > 127.0.0.1		localhost  
 > ::1				localhost  
-> 127.0.1.1	(myhostname) <-- This is the hostname set with hostnamectl set-hostname
+> 127.0.1.1	(myhostname) <-- This is the hostname set previously
 
 #### 11. Set root password and add a standard user
 - Set root password with command **passwd**
