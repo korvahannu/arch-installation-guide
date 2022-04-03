@@ -79,11 +79,16 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 ## Chapter 3: Bootloader (GRUB) and important device drivers
 #### 12. Installing GRUB
 - Download necessary files with **pacman -S grub efibootmgr dosfstools os-prober mtools**
+- If you dual boot and want grub to list your Windows -installation, install **pacman -S ntfs-3g**
 - Create EFI directory using command **mkdir /boot/EFI**
 - Mount created directory to efi partition with **mount _(EFI PARTITION)_ /boot/EFI**
 - Install grub with **grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck**
 - Legacy only (non-uefi): *grub-install --target=i386-pc --recheck (DEVICE NAME, e.g. /dev/sda)*
 - Copy locale to grub with this command **cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo**
+- If you want to dual boot and want grub to list other operating systems (optional)
+-- **nano /etc/default/grub**
+-- Scroll to the bottom of the file and uncomment line **GRUB_DISABLE_OS_PROBER=false**
+-- Save the file
 - Set up grub config with **grub-mkconfig -o /boot/grub/grub.cfg**
 
 #### 13. Install drivers
