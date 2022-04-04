@@ -16,7 +16,7 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 > Enter wireless connection setup mode with **iwctl**  
 > Check what wireless adapters you have and write it down with **device list**  
 > Use your wireless adapter to scan available wireless networks with **station _(your device)_ scan**  
-> Check what networks your wireless adapter found with **station _(your device)_ get-netoworks**  
+> Check what networks your wireless adapter found with **station _(your device)_ get-networks**  
 > Connect to the network of your choice with **station _(your device)_ _(network of your choice)_**  
 > Wait awhile and press CTRL+C to exit wireless connection setup mode
 - Check connection with **ping 8.8.8.8**
