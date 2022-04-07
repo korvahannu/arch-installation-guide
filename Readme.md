@@ -55,7 +55,7 @@ This installation guide assumes that you've downloaded Arch Linux installation .
 #### 8. chroot into the new system
 - Write **arch-chroot /mnt**
 
-#### 9. Set localization (optional)
+#### 9. Set localization
 - Open locale.gen with nano and uncomment the locale you want to use, command is nano **/etc/locale.gen**
 - Generate locale with command **locale-gen**
 - Edit locale.conf and write in LANG name accordingly, command is **nano /etc/locale.conf** and content example is **_LANG=en_US.UTF-8_**
